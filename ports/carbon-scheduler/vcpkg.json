@@ -1,6 +1,6 @@
 {
   "name": "carbon-scheduler",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Provides channels and a scheduler for Greenlet coroutines.",
   "homepage": "https://github.com/carbonengine/scheduler",
   "license": "MIT",
