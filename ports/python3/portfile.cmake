@@ -201,6 +201,13 @@ if(VCPKG_TARGET_IS_WINDOWS)
     )
     file(COPY "${SOURCE_PATH}/Lib" DESTINATION "${CURRENT_PACKAGES_DIR}/tools/${PORT}")
 
+    # copy debug symbols
+    set(BUILD_PATHS
+        "${CURRENT_PACKAGES_DIR}/bin/*.pyd"
+        "${CURRENT_PACKAGES_DIR}/debug/bin/*.pyd"
+    )
+    vcpkg_copy_pdbs(BUILD_PATHS ${BUILD_PATHS})
+
     # Remove any extension libraries and other unversioned binaries that could conflict with the python2 port.
     # You don't need to link against these anyway.
     file(GLOB PYTHON_LIBS
