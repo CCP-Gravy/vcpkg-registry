@@ -22,9 +22,7 @@ toolchain files when building a component as a top-level project. At the time of
 unproblematic, but it does introduce a possible failure point that can strike at inopportune moments.
 
 In order to make use of the triplet files inside `triplets/`, the environment variable `PATH_TO_VCPKG_ROOT` must be 
-defined as the absolute path to the root of a valid VCPKG installation, so if you cloned vcpkg to `/Users/Joe/vcpkg`
-`cd /Users/Joe; git clone git@github.com:microsoft/vcpkg.git`
-Then `PATH_TO_VCPKG_ROOT` would be `/Users/Joe/vcpkg`
+defined as the absolute path to the root of a valid VCPKG installation.
 
 Carbon components should contain vcpkg as a submodule, and set `PATH_TO_VCPKG_ROOT` in CMakePresets.json:
 ```json
