@@ -20,3 +20,21 @@ One thing that may seem odd about the custom toolchains is that they are split i
 and the other with `-triplet`. This split is done to avoid unnecessarily including vcpkg's very own platform-specific
 toolchain files when building a component as a top-level project. At the time of this writing, such an include would be
 unproblematic, but it does introduce a possible failure point that can strike at inopportune moments.
+
+In order to make use of the triplet files inside `triplets/`, the environment variable `PATH_TO_VCPKG_ROOT` must be 
+defined as the absolute path to the root of a valid VCPKG installation, so if you cloned vcpkg to `/Users/Joe/vcpkg`
+`cd /Users/Joe; git clone git@github.com:microsoft/vcpkg.git`
+Then `PATH_TO_VCPKG_ROOT` would be `/Users/Joe/vcpkg`
+
+Carbon components should contain vcpkg as a submodule, and set `PATH_TO_VCPKG_ROOT` in CMakePresets.json:
+```json
+  "configurePresets": [
+    {
+      "toolchainFile": "${sourceDir}/vendor/github.com/microsoft/vcpkg/scripts/buildsystems/vcpkg.cmake",
+      ...
+      "environment": {
+        "PATH_TO_VCPKG_ROOT": "${sourceDir}/vendor/github.com/microsoft/vcpkg"
+      }
+    },
+```
+ Information on why this environment variable is necessary is available here: https://github.com/carbonengine/vcpkg-registry/pull/34
