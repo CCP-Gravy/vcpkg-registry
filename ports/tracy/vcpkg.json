@@ -90,6 +90,9 @@
         "zstd"
       ]
     },
+    "ignore-memory-faults": {
+      "description": "Ignore instrumentation errors from memory free events that do not have a matching allocation"
+    },
     "libbacktrace-elf-dynload-support": {
       "description": "Enable libbacktrace to support dynamically loaded elfs in symbol resolution resolution after the first symbol resolve operation"
     },
@@ -153,9 +156,6 @@
     "verbose": {
       "description": "Enables verbose logging",
       "supports": "!android"
-    },
-    "ignore-memory-faults": {
-      "description": "Ignore instrumentation errors from memory free events that do not have a matching allocation"
     }
   }
 }
