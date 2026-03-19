@@ -36,6 +36,7 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
         libunwind-backtrace              TRACY_LIBUNWIND_BACKTRACE
         symbol-offline-resolve           TRACY_SYMBOL_OFFLINE_RESOLVE
         libbacktrace-elf-dynload-support TRACY_LIBBACKTRACE_ELF_DYNLOAD_SUPPORT
+        ignore-memory-faults             TRACY_IGNORE_MEMORY_FAULTS
 
     INVERTED_FEATURES
         crash-handler TRACY_NO_CRASH_HANDLER

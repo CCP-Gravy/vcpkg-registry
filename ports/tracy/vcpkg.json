@@ -153,6 +153,9 @@
     "verbose": {
       "description": "Enables verbose logging",
       "supports": "!android"
+    },
+    "ignore-memory-faults": {
+      "description": "Ignore instrumentation errors from memory free events that do not have a matching allocation"
     }
   }
 }
