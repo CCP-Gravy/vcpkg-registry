@@ -1,6 +1,6 @@
 {
   "name": "carbon-core",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Provides generic low-level functionality and cross-platform abstractions for system calls",
   "homepage": "https://github.com/carbonengine/core",
   "license": "MIT",
@@ -20,7 +20,7 @@
         "no-callstack",
         "on-demand"
       ],
-      "version>=": "0.11.1"
+      "version>=": "0.13.1"
     },
     {
       "name": "vcpkg-cmake",
@@ -38,7 +38,7 @@
         {
           "name": "python3",
           "host": true,
-          "version>=": "3.12.9"
+          "version>=": "3.12.9#1"
         }
       ]
     }
