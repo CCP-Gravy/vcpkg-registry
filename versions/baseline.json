@@ -30,7 +30,7 @@
     },
     "bsdiff-drake127": {
       "baseline": "4.3.3",
-      "port-version": 2
+      "port-version": 3
     },
     "carbon": {
       "baseline": "1.0.0",
