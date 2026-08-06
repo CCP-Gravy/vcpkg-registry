@@ -1,12 +1,13 @@
 {
   "name": "carbon-resources",
   "version": "4.3.2",
+  "port-version": 1,
   "homepage": "https://github.com/carbonengine/resources",
   "license": "MIT",
   "dependencies": [
     {
       "name": "bsdiff-drake127",
-      "version>=": "4.3.3#2"
+      "version>=": "4.3.3#3"
     },
     {
       "name": "cryptopp",
