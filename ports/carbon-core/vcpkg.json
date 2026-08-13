@@ -1,6 +1,6 @@
 {
   "name": "carbon-core",
-  "version-semver": "3.0.1",
+  "version-semver": "3.1.0",
   "description": "Provides generic low-level functionality and cross-platform abstractions for system calls",
   "homepage": "https://github.com/carbonengine/core",
   "license": "MIT",
